@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.sorefa.controllers.C_Clients">
+   <children>
+      <GridPane layoutX="22.0" layoutY="29.0" prefHeight="507.0" prefWidth="700.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="lb_codeCivilite1" prefHeight="17.0" prefWidth="115.0" text="Civilite :" />
+            <ComboBox fx:id="cb_civilite" prefWidth="150.0" GridPane.columnIndex="1" />
+            <Label fx:id="lb_idClient" prefHeight="17.0" prefWidth="89.0" text="ID Client :" GridPane.rowIndex="1" />
+            <TextField fx:id="ed_idClient" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="lb_nomClient" prefHeight="17.0" prefWidth="115.0" text="Nom Client :" GridPane.rowIndex="2" />
+            <TextField fx:id="ed_nomClient" text=" " GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="lb_prenomClient" prefHeight="17.0" prefWidth="115.0" text="Prenom Client :" GridPane.rowIndex="3" />
+            <TextField fx:id="ed_prenomClient" text=" " GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="lb_numTvaClient" prefHeight="17.0" prefWidth="98.0" text="num_tva_client :" GridPane.rowIndex="4" />
+            <TextField fx:id="ed_numTvaClient" text=" " GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="lb_siretClient" prefHeight="17.0" prefWidth="89.0" text="Siret Client :" GridPane.rowIndex="5" />
+            <TextField fx:id="ed_siretClient" text=" " GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="lb_telClient" prefHeight="17.0" prefWidth="115.0" text="Tel Client :" GridPane.rowIndex="6" />
+            <TextField fx:id="ed_telClient" text=" " GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label fx:id="lb_codeStatut" prefHeight="17.0" prefWidth="115.0" text="Statut juridique :" GridPane.columnIndex="3" />
+            <ComboBox fx:id="cb_statut" prefWidth="150.0" GridPane.columnIndex="4" />
+            <Label fx:id="lb_nomEntreprise" prefHeight="17.0" prefWidth="121.0" text="Nom Entreprise :" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="ed_nomEntreprise" text=" " GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <RadioButton fx:id="rb_particulier" mnemonicParsing="false" prefHeight="17.0" prefWidth="108.0" text="Particulier" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <toggleGroup>
+                  <ToggleGroup fx:id="rbg_boolEnt" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rb_profesionnel" mnemonicParsing="false" prefHeight="18.0" prefWidth="132.0" text="Professionnel" toggleGroup="$rbg_boolEnt" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Label fx:id="lb_dateCreate" prefHeight="17.0" prefWidth="115.0" text="Date de création :" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <TextField fx:id="ed_dateCreate" text=" " GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <Label fx:id="lb_com" prefHeight="17.0" prefWidth="115.0" text="Commentaires :" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <TextArea fx:id="ta_com" prefHeight="116.0" prefWidth="188.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+            <Label fx:id="lb_add1Client" prefHeight="17.0" prefWidth="108.0" text="Adresse 1 Client :" GridPane.rowIndex="8" />
+            <Label fx:id="lb_add2Client" prefHeight="17.0" prefWidth="115.0" text="Adresse 2 client :" GridPane.rowIndex="9" />
+            <Label fx:id="lb_lieuDitClient" prefHeight="17.0" prefWidth="115.0" text="Lieu dit client :" GridPane.rowIndex="10" />
+            <TextField fx:id="ed_add1Client" text=" " GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField fx:id="ed_add2Client" text=" " GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <TextField fx:id="ed_lieuDitClient" text=" " GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <Label fx:id="lb_cpClient" prefHeight="18.0" prefWidth="141.0" text="Code Postal Client :" GridPane.rowIndex="11" />
+            <TextField fx:id="ed_cpClient" text=" " GridPane.columnIndex="1" GridPane.rowIndex="11" />
+            <Label fx:id="lb_villeClient" prefHeight="17.0" prefWidth="115.0" text="Ville Client :" GridPane.rowIndex="12" />
+            <TextField fx:id="ed_villeClient" text=" " GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            <Button fx:id="bt_ajout" mnemonicParsing="false" onAction="#ajoutClient" text="Ajouter" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+            <Button fx:id="bt_enreg" mnemonicParsing="false" onAction="#enreg_client" text="Enregistrer" GridPane.columnIndex="2" GridPane.rowIndex="14" />
+            <Button fx:id="bt_supp" mnemonicParsing="false" onAction="#suppClient" text="Supprimer" GridPane.columnIndex="2" GridPane.rowIndex="14" />
+            <Button fx:id="bt_annuler" mnemonicParsing="false" onAction="#annuler" text="Annuler" GridPane.columnIndex="4" GridPane.rowIndex="14" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

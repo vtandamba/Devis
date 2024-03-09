@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.sorefa.controllers.C_Produits">
+   <children>
+      <GridPane fx:id="gp_compos" layoutX="141.0" layoutY="507.0" prefHeight="140.0" prefWidth="564.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="168.0" minWidth="10.0" prefWidth="147.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="157.5" minWidth="10.0" prefWidth="80.5" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="336.5" minWidth="10.0" prefWidth="336.5" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="lb_ordre" prefHeight="17.0" prefWidth="55.0" text="Ordre : " />
+            <TextField fx:id="ed_ordre" GridPane.columnIndex="2" />
+            <TextField fx:id="ed_qte" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label fx:id="lb_qte" text="quantité du mix :" GridPane.rowIndex="1" />
+            <Label fx:id="lb_com" text="Commentaire :" GridPane.rowIndex="2" />
+            <TextArea fx:id="ta_com" prefHeight="69.0" prefWidth="111.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button fx:id="bt_personnaVal" mnemonicParsing="false" onAction="#validerPersonnaliser" text="Valider " GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin></Button>
+            <Button fx:id="bt_personaAnnuler" mnemonicParsing="false" onAction="#anulerPpersonnaliser" text="Anuler " GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tb_produits1" layoutX="133.0" layoutY="2.0" onKeyReleased="#tb_prodb_released" onMouseClicked="#tb_prodb_clicked" prefHeight="232.0" prefWidth="596.0">
+         <columns>
+            <TableColumn fx:id="tc_id_produit1" prefWidth="91.0" text="ID" />
+            <TableColumn fx:id="tc_libelle_produit1" prefWidth="122.5" text="Libellé produits" />
+            <TableColumn fx:id="tc_commentaire1" prefWidth="123.5" text="Commentaire" />
+            <TableColumn fx:id="tc_prix_achat1" prefWidth="132.0" text="Prix achat HT" />
+            <TableColumn fx:id="tc_prix_unitaire1" prefWidth="160.0" text="Prix unitaire HT" />
+         </columns>
+      </TableView>
+      <Button fx:id="bt_enreg_compos" layoutX="155.0" layoutY="550.0" mnemonicParsing="false" onAction="#enregComposition" onMouseClicked="#remove" prefHeight="25.0" prefWidth="114.0" text="Enregistrer" />
+      <Button fx:id="bt_fermerCompos" layoutX="593.0" layoutY="550.0" mnemonicParsing="false" onAction="#fermerCompositon" onMouseClicked="#remove" prefHeight="25.0" prefWidth="114.0" text="Fermer" />
+      <TableView fx:id="tb_compos" layoutX="133.0" layoutY="276.0" onKeyReleased="#editionCompo" onMouseClicked="#editionCompos" prefHeight="222.0" prefWidth="596.0">
+         <columns>
+            <TableColumn fx:id="tc_id_compos" prefWidth="185.0" text="ID produit composé" />
+            <TableColumn fx:id="tc_libelle_compos" prefWidth="210.0" text="Libellé Composition" />
+            <TableColumn fx:id="tc_com" prefWidth="188.0" text="commentaire" />
+         </columns>
+      </TableView>
+      <Label fx:id="lb_idProd" layoutX="61.0" layoutY="16.0" prefHeight="17.0" prefWidth="53.0" />
+      <Label fx:id="lb_idProduit" layoutX="41.0" layoutY="16.0" prefHeight="17.0" prefWidth="53.0" text="ID :" />
+      <Button fx:id="bt_personnaliser" layoutX="30.0" layoutY="454.0" mnemonicParsing="false" onAction="#personnaliser" text="Personnaliser" />
+      <Label fx:id="lb_isMix" layoutX="133.0" layoutY="657.0" />
+      <Button fx:id="bt_addRow" layoutX="393.0" layoutY="244.0" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="25.0" text="+" />
+      <Button fx:id="bt_removeRow" layoutX="422.0" layoutY="244.0" mnemonicParsing="false" onAction="#remove" prefHeight="25.0" prefWidth="25.0" text="-" />
+      <Button fx:id="bt_up" layoutX="85.0" layoutY="387.0" mnemonicParsing="false" text="↑" />
+      <Button fx:id="bt_down" layoutX="110.0" layoutY="387.0" mnemonicParsing="false" text="↓" />
+   </children>
+</AnchorPane>

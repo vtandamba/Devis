@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.sorefa.controllers.C_Devis">
+   <children>
+      <MenuBar layoutY="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="mi_devis_enreg" mnemonicParsing="false" onAction="#charger_devis" text="Devis enregistrés" />
+                  <MenuItem fx:id="devisPdf" mnemonicParsing="false" onAction="#ouvrirDevisPdf" text="Consulter les devis enregistrés" />
+              <MenuItem fx:id="bt_fermer" mnemonicParsing="false" onAction="#onClickFermerDevis" text="Fermer" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="8.0" layoutY="43.0" prefHeight="17.0" prefWidth="247.0" text="liste des devis " />
+      <HBox layoutY="286.0" prefHeight="36.0" prefWidth="415.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="185.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button mnemonicParsing="false" text="Ajouter" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button mnemonicParsing="false" text="modifier" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button mnemonicParsing="false" text="Supprimer" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="bt_retourduDevis" mnemonicParsing="false" onAction="#onClickFermerDevis" text="retour" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <TableView fx:id="tb_devis" layoutX="62.0" layoutY="77.0" prefHeight="166.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <columns>
+          <TableColumn prefWidth="122.0" text="Nom Client" />
+            <TableColumn prefWidth="138.5" text="Reference Devis" />
+            <TableColumn prefWidth="145.5" text="Chantier" />
+            <TableColumn prefWidth="180.5" text="Date de Signature" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
